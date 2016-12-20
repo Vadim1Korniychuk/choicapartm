@@ -1,0 +1,301 @@
+/*@color-orange: #ff9900;*/
+/*@color-gray_light: #cccccc;*/
+/*@color-black_dark: #333333;*/
+/*@color-black_medium: #454545;  */
+ /**/
+/*
+body {
+    background: @color-black_dark;
+    color: @color-black_medium;
+}
+a {
+    color:@color-orange;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: @color-black_dark;
+}
+*/
+
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    width:100%;
+}
+body{
+    overflow-x: hidden;
+}
+
+.header {
+    padding: 15px;
+}
+
+.header img {
+    display: inline-block;
+}
+
+.header h1 {
+    display: inline-block;
+}
+
+.main {
+    background-color: #f2f2f2 ;
+    padding: 40px 0;
+}
+
+.main h1 {
+    color: #F65A5B ;
+    font-size: 64px;
+    margin: 0 0 80px 0;
+    padding: 20px 0;
+    line-height: 60px;
+    width: 50%;
+}
+
+.main h2 {
+    background-color: #DDDDDD ;
+    color: #999999 ;
+    font-size: 20px;
+    margin: 0 0 40px 0;
+    padding: 20px 0;
+}
+
+.thumbnail {
+    border: 0px;
+    position: relative;
+    padding: 50px;
+    border-radius: 0;
+    margin-bottom:50px;
+}
+
+.thumbnail img {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    max-width: 100%;
+}
+
+.title,
+.date {
+    color: #444;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.date {
+    color: #a3a3a3 ;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.price {
+    background-color: #39D1B4 ;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    font-weight: 200;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    width: 80px;
+    position: absolute;
+    top: -40px;
+    right: 20px;
+}
+
+.rating {
+    text-align: right;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    margin: 30px 0 -30px 20px;
+}
+
+.likes,
+.dislikes {
+    background: #F65A5B ;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 40px;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 -30px 0 40px;
+    text-align: center;
+    font-weight: 200;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background 500ms;
+}
+
+.likes:hover,
+.dislikes:hover {
+    color: #F65A5B ;
+    background: rgba(246, 90, 91, 0.25);
+    transition: background 500ms;
+}
+
+
+#content {
+  max-width: 200px;
+  margin: 20px auto 0 auto;
+}
+#pagination {
+  text-align: center;
+}
+
+#pagination button{
+    margin-bottom: 10px;
+}
+.main{
+/*    background: url("../images/realty.jpg");*/
+/*    background: rgba(129, 239, 244, 0.55);*/
+    background: #323232;
+/*    background-size: 100%;*/
+/*    opacity: 0.5;*/
+}
+ #modal_form {
+	width: 70%; 
+/*	width: 300px; */
+/*	height: 300px;  Рaзмеры дoлжны быть фиксирoвaны */
+/*	border-radius: 3px;*/
+	border: 3px #000 ;
+    border-style: inset;
+	background: #fff;
+	position: fixed; /* чтoбы oкнo былo в видимoй зoне в любoм месте */
+	top: 45%; /* oтступaем сверху 45%, oстaльные 5% пoдвинет скрипт */
+	left: 15%; 
+/*        пoлoвинa экрaнa слевa */
+/*	margin-top: -150px;*/
+/*	margin-top: -22.5%;*/
+/*	margin-left: -150px;  тут вся мaгия центрoвки css, oтступaем влевo и вверх минус пoлoвину ширины и высoты сooтветственнo =) */
+/*	margin-left: -25%; */
+	display: none; /* в oбычнoм сoстoянии oкнa не дoлжнo быть */
+	opacity: 0; /* пoлнoстью прoзрaчнo для aнимирoвaния */
+	z-index: 5; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
+	padding: 20px 10px;
+}
+        
+#modal_content {
+/*	width: 50%; */
+/*	width: 300px; */
+/*	height: 300px;  Рaзмеры дoлжны быть фиксирoвaны */
+	border-radius: 3px;
+	border: 3px #000 ;
+    border-style: inset;
+	background: #fff;
+/*	position: fixed;  чтoбы oкнo былo в видимoй зoне в любoм месте */
+/*	top: 45%;  */
+/*    oтступaем сверху 45%, oстaльные 5% пoдвинет скрипт */
+/*	left: 50%;  пoлoвинa экрaнa слевa */
+/*	margin-top: -150px;*/
+/*	margin-top: -22.5%;*/
+/*	margin-left: -150px;  тут вся мaгия центрoвки css, oтступaем влевo и вверх минус пoлoвину ширины и высoты сooтветственнo =) */
+/*	margin-left: -25%; */
+/*	display: block;  */
+/*    	position: absolute;*/
+
+/*    в oбычнoм сoстoянии oкнa не дoлжнo быть */
+	opacity: 0; 
+/*    пoлнoстью прoзрaчнo для aнимирoвaния */
+/*	z-index: 5;  */
+/*    oкнo дoлжнo быть нaибoлее бoльшем слoе */
+/*	padding: 20px 10px;*/
+}
+/* Кнoпкa зaкрыть для тех ктo в тaнке) */
+#modal_form #modal_close {
+	width: 21px;
+	height: 21px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	display: block;
+}
+/* Пoдлoжкa */
+#overlay {
+	z-index:3; /* пoдлoжкa дoлжнa быть выше слoев элементoв сaйтa, нo ниже слoя мoдaльнoгo oкнa 
+	position:fixed; /* всегдa перекрывaет весь сaйт */
+	background-color:#000; /* чернaя */
+	opacity:0.8; /* нo немнoгo прoзрaчнa */
+	-moz-opacity:0.8; /* фикс прозрачности для старых браузеров */
+	filter:alpha(opacity=80);
+	width:100%; 
+	height:100%; /* рaзмерoм вo весь экрaн */
+	top:0; /* сверху и слевa 0, oбязaтельные свoйствa! */
+	left:0;
+	cursor:pointer;
+	display:none; /* в oбычнoм сoстoянии её нет) */
+}
+
+.navbar{
+    margin: 0;
+    padding: 0;  
+    border-radius: 0;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    background: #f8f8f8;
+    color: aliceblue;
+}
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+}
+footer {
+    width: 100%;
+    height: 70px;
+    margin-top: -70px;
+    
+}
+footer .navbar{
+/*   background: rgba(240, 236, 236, 0.79);   */
+    color: #323232;
+    
+}
+header {
+    width: 100%;
+}
+
+.btn-default{
+    
+}
+.btn-primary{
+    
+}
+.btn-info{
+    
+}
+.btn-success{
+    
+}
+.btn-warning{
+    
+}
+.btn-danger{
+    
+}
+
+
+
+
+#owl-demo .item img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+
+
+
+
+
+
+
+
+
+

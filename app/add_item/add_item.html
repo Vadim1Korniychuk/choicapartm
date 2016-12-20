@@ -1,0 +1,132 @@
+<!--<div class="main" ng-controller="MainController">-->
+<!--<div class="content" ng-controller="AddItemCtrl">-->
+<div class="content">
+  <div class="container">
+
+    <form name="add_form" ng-submit="addItem()" novalidate>
+
+
+
+
+      <style>
+        .input {
+          width: 100%;
+        }
+        .div_input {
+          height: 56px;
+        }
+        .div_enum {
+          height: 74px;
+        }
+        .content{
+          margin-left: 100px;
+          margin-right: 100px;
+        }
+
+      </style>
+
+      <div>
+        Додати
+        <a id="show_inputs">
+          <i class="glyphicon glyphicon-chevron-down"></i>
+        </a>
+        <a id="hide_inputs">
+          <i class="glyphicon glyphicon-chevron-up"></i>
+        </a>
+      </div>
+      <div class="row" id="div_inputs">
+        <div class="div_input col-xs-6 col-sm-4 col-md-3 col-lg-2" ng-repeat="item_input in input">
+          <label for="{{ item_input.name }}"> {{ item_input.label }}: </label><br>
+
+
+          <!--<input class = "input" id="{{ item_input.name }}" name="{{item_input.name }}" ng-required="required">-->
+          <input class = "input" id="{{ item_input.name }}" name="{{item_input.name }}" required
+                 ng-model ="add_item[item_input.name]">
+          <!--<input class = "input" id="{{ item_input.name }}" name="{{item_input.name }}" ng-required>-->
+        </div>
+      </div>
+
+
+
+
+      <div>
+        Додати
+        <a id="show_enums">
+          <i class="glyphicon glyphicon-chevron-down"></i>
+        </a>
+        <a id="hide_enums">
+          <i class="glyphicon glyphicon-chevron-up"></i>
+        </a>
+      </div>
+
+      <div class="row" id="div_enums">
+        <div class="div_enum col-xs-6 col-sm-4 col-md-3 col-lg-2" ng-repeat="enum_type in enum">
+          <label for="{{ enum_type.name }}"> {{ enum_type.label }}: </label><br>
+          <select id="{{ enum_type.name }}" name="{{ enum_type.name }}" class="form-control"
+                  ng-model ="add_item[enum_type.name]"
+                  ng-options = "type.label as type.label for type in enum_type.data">
+            <option value="">Не вказано</option>
+
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-2 col-sm-3 col-md-4 col-lg-5">
+        </div>
+        <div class="col-xs-10 col-sm-6 col-md-6 col-lg-6">
+          <button class="btn btn-primary btn-md" type="submit">Зберегти</button>
+          <!--                </div>-->
+          <!--                <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">-->
+          <button class="btn btn-danger btn-md" type="reset">Очистити</button>
+        </div>
+      </div>
+      <br>
+
+
+
+      <!--<span ng-show="invalidSubjectSelection" class="help-block">select opti</span>-->
+
+    </form>
+
+  </div>
+
+
+
+
+</div>
+
+
+<script>
+    $(function(){
+        $("#div_inputs").toggle();
+        $("#div_enums").toggle();
+
+        $("#hide_inputs").toggle();
+        $("#hide_enums").toggle();
+
+
+
+        $("#show_inputs").click(function(){
+            $("#div_inputs").toggle();
+            $("#hide_inputs").toggle();
+            $("#show_inputs").toggle();
+        });
+        $("#hide_inputs").click(function(){
+            $("#div_inputs").toggle();
+            $("#hide_inputs").toggle();
+            $("#show_inputs").toggle();
+        });
+        $("#show_enums").click(function(){
+            $("#div_enums").toggle();
+            $("#hide_enums").toggle();
+            $("#show_enums").toggle();
+        });
+        $("#hide_enums").click(function(){
+            $("#div_enums").toggle();
+            $("#hide_enums").toggle();
+            $("#show_enums").toggle();
+        });
+
+    });
+</script>

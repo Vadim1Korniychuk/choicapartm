@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet/less"  href="app.less">
+
+
+  <!--        <link rel="stylesheet" type="text/css" href="style.css" />-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <!--&lt;!&ndash; Latest compiled and minified CSS &ndash;&gt;-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!--&lt;!&ndash; Optional theme &ndash;&gt;-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <!--&lt;!&ndash; Latest compiled and minified JavaScript &ndash;&gt;-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div class="wrapper">
+
+  <header style="margin: 0; padding: 0;">
+    <nav id="navbar_header" class="navbar navbar-default">
+      <div class="container">
+        <div class="col-sm-4">
+          <div id="logo">
+            <a href="../"><img src="../images/logo.png" title="Your Store" alt="Your Store" class="img-responsive"></a>
+          </div>
+        </div>
+        <div id="top-links" class="nav pull-right">
+          <ul class="list-inline">
+            <!--                    <li><a href="##"><span class="glyphicon glyphicon-phone"></span>123456789</a></li>-->
+            <li><a href="#account">Привіт, Ім'я</a></li>
+            <li><a href="#exit">Вийти</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <menu style=" padding: 0;">
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../">&emsp;&emsp;Головна&emsp;&emsp;</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class=""><a href="#!/items">&emsp;Перегляд об'єктів&emsp;</a></li>
+            <li><a href="#!/add_item">&emsp;Додати об'єкт&emsp;</a></li>
+            <li><a href="#!/items#m1" class="scrollto">&emsp;Контактна інформація&emsp;</a></li>
+
+          </ul>
+
+          <!--                <ul class="nav navbar-nav navbar-right">-->
+          <form class="navbar-form navbar-right" role="search">
+
+            <a href="#!/items" class="btn btn-default">&emsp;&emsp;Знайти за фільтрами&emsp;&emsp;</a>
+          </form>
+
+          <!--                </ul>-->
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+  </menu>
+
+  <div ng-view></div>
+
+</div>
+
+<footer>
+
+  <div class="navbar navbar-default">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h4>Контактна інформація</h4>
+          <div class="col-sm-3"><strong>Your Store</strong><br>
+            <address>
+              Address 1 </address>
+          </div>
+          <div class="col-sm-3"><strong>Telephone</strong><br>
+            123456789<br>
+            <br>
+          </div>
+          <div class="col-sm-3">
+          </div>
+        </div>
+      </div>
+      <hr>
+      <p>Розроблено <a href="#mail">Вадимом Корнійчуком</a><br>Realty  &copy; 2016</p>
+    </div>
+  </div>
+</footer>
+
+
+
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+
+  <script src="app.js"></script>
+  <script src="factory.js"></script>
+  <script src="filters.js"></script>
+  <script src="other_controller/pagination.js"></script>
+
+  <script src="items/items.js"></script>
+  <script src="add_item/add_item.js"></script>
+
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+
+  <script src="less.js" type="text/javascript"></script>
+  <script src="main.js" type="text/javascript"></script>
+</body>
+</html>

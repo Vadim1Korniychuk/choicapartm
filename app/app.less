@@ -1,0 +1,279 @@
+/* app css stylesheet */
+@base: #f2f2f2;
+@color1: #F65A5B;
+@color2: #2344f6;
+
+@base_unit: 10px;
+@base_un: 2;
+@font-size: 18px;
+@height: 40px;
+
+
+.menu {
+  list-style: none;
+  border-bottom: unit(@base_un/20, em) solid black;
+  margin-bottom: unit(@base_un, em);
+  padding: 0 0 unit(@base_un/4, em);
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li + li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+
+
+html, body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  width:100%;
+}
+body{
+  overflow-x: hidden;
+}
+menu{
+  margin-top: -@height/2;
+}
+
+.header {
+  padding: 15px;
+}
+
+.header img {
+  display: inline-block;
+}
+
+.header h1 {
+  display: inline-block;
+}
+
+.content {
+  background-color: @base ;
+  //padding: 60px;
+  padding-top: 50px;
+  /*padding-left: 60px;*/
+  /*padding-right: 60px;*/
+  padding-bottom: 20px;
+  margin: -@height/2;
+}
+
+.main h1 {
+  color: @color1 ;
+  font-size: @font-size * 3.5;
+  margin: 0 0 @height*2 0;
+  padding: @height/2 0;
+  line-height: 60px;
+  width: 50%;
+}
+
+.main h2 {
+  background-color: #DDDDDD ;
+  color: #999999 ;
+  font-size: @font-size;
+  margin: 0 0 @height 0;
+  padding: @height/2 0;
+}
+
+.thumbnail {
+  border: 0px;
+  position: relative;
+  padding: 50px;
+  border-radius: 0;
+  margin-bottom:50px;
+}
+
+.thumbnail img {
+  margin-top: @base_unit;
+  margin-bottom: 30px;
+  max-width: 100%;
+}
+
+.title,
+.date {
+  color: #444;
+  margin: 0;
+  font-size:@font-size;
+  font-weight: 800;
+}
+
+.date {
+  color: #a3a3a3 ;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.price {
+  background-color: #39D1B4 ;
+  color: #fff;
+  font-size: @font-size;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  font-weight: 200;
+  height: @height*2;
+  line-height: @height*2;
+  text-align: center;
+  width: @height*2;
+  position: absolute;
+  top: -40px;
+  right: 20px;
+}
+
+.rating {
+  text-align: right;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  margin: 30px 0 -30px 20px;
+}
+
+#content {
+  max-width: 200px;
+  margin: 20px auto 0 auto;
+}
+#pagination {
+  text-align: center;
+}
+
+#pagination button{
+  margin-bottom: @base_unit;
+}
+.main{
+
+  background: #323232;
+
+}
+#modal_form {
+  width: 70%;
+
+  border: 3px #000 ;
+  border-style: inset;
+  background: #fff;
+  position: fixed; /* чтoбы oкнo былo в видимoй зoне в любoм месте */
+  top: 45%; /* oтступaем сверху 45%, oстaльные 5% пoдвинет скрипт */
+  left: 15%;
+
+  display: none; /* в oбычнoм сoстoянии oкнa не дoлжнo быть */
+  opacity: 0; /* пoлнoстью прoзрaчнo для aнимирoвaния */
+  z-index: 5; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
+  padding: 20px @base_unit;
+}
+
+#modal_content {
+  border-radius: 3px;
+  border: 3px #000 ;
+  border-style: inset;
+  background: #fff;
+
+  opacity: 0;
+
+}
+/* Кнoпкa зaкрыть для тех ктo в тaнке) */
+#modal_form #modal_close {
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  top: @base_unit;
+  right: @base_unit;
+  cursor: pointer;
+  display: block;
+}
+/* Пoдлoжкa */
+#overlay {
+  z-index:3; /* пoдлoжкa дoлжнa быть выше слoев элементoв сaйтa, нo ниже слoя мoдaльнoгo oкнa
+	position:fixed; /* всегдa перекрывaет весь сaйт */
+  background-color:#000; /* чернaя */
+  opacity:0.8; /* нo немнoгo прoзрaчнa */
+  -moz-opacity:0.8; /* фикс прозрачности для старых браузеров */
+  filter:alpha(opacity=80);
+  width:100%;
+  height:100%; /* рaзмерoм вo весь экрaн */
+  top:0; /* сверху и слевa 0, oбязaтельные свoйствa! */
+  left:0;
+  cursor:pointer;
+  display:none; /* в oбычнoм сoстoянии её нет) */
+}
+
+.navbar{
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  background-color: @base ;
+  color: aliceblue;
+}
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  background-color: @base ;
+
+}
+footer {
+  width: 100%;
+  height: 70px;
+  margin-top: -10px;
+
+}
+footer .navbar{
+  /*   background: rgba(240, 236, 236, 0.79);   */
+  color: average(@base, @color2);
+
+}
+header {
+  width: 100%;
+}
+
+.btn-default{
+
+}
+.btn-primary{
+
+}
+.btn-info{
+
+}
+.btn-success{
+
+}
+.btn-warning{
+
+}
+.btn-danger{
+
+}
+
+
+
+
+#owl-demo .item img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
